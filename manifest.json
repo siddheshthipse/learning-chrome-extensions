@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "KTern ChatGPT Guard",
   "description": "Prevents submission if specific words related to the company are typed into the ChatGPT prompt window",
+  "version": "1.0",
   "content_scripts": [
     {
       "matches": ["https://chat.openai.com/*"],
