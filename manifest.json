@@ -1,10 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "KTern: Record Testcases, Create Tasks!",
-  "description": "This extension shows a Hello World message!",
-  "version": "1.0",
+  "name": "KTern ChatGPT Guard",
+  "description": "Prevents submission if specific words related to the company are typed into the ChatGPT prompt window",
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "css": ["styles.css"],
+      "js": ["contentScript.js", "wordsList.js"]
+    }
+  ],
   "action": {
-    "default_popup": "window.html",
     "default_icon": "icon.png"
   }
 }
